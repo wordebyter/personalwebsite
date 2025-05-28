@@ -5,6 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            color: white;
+            animation: bgSlideshow 20s infinite;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes bgSlideshow {
+            0% { background-image: url('hawaii.jpg'); }
+            25% { background-image: url('engagement.jpg'); }
+            50% { background-image: url('ny.jpg'); }
+            75% { background-image: url('running.jpg'); }
+            100% { background-image: url('hawaii.jpg'); }
+        }
+
+        #rsvp {
+            background: rgba(0, 0, 0, 0.6); /* transparent black for readability */
+            padding: 2em;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 2em auto;
+        }
+
+        label, input, textarea, select {
+            display: block;
+            width: 100%;
+            margin-top: 0.5em;
+        }
+
+        input, textarea, select {
+            padding: 0.5em;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            margin-top: 1em;
+            padding: 0.7em 1.5em;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffcccc;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -51,10 +101,17 @@
             </p>
 
             <!-- Honeypot spam protection -->
-            <input type="text" name="_gotcha" style="display:none">
+            <input type="text" name="_gotcha" style="display:none" autocomplete="off">
 
             <button type="submit">Submit RSVP</button>
         </form>
+        <h3>Some moments from our journey</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center;">
+                <img src="hawaii.jpg" alt="Hawaii" style="width: 45%; max-width: 300px; border-radius: 10px;">
+                <img src="engagement.jpg" alt="Engagement" style="width: 45%; max-width: 300px; border-radius: 10px;">
+                <img src="ny.jpg" alt="New York" style="width: 45%; max-width: 300px; border-radius: 10px;">
+                <img src="running.jpg" alt="Running together" style="width: 45%; max-width: 300px; border-radius: 10px;">
+            </div>
     </section>
     <script>
         document.getElementById('rsvp-form').addEventListener('submit', function (event) {
