@@ -1,24 +1,61 @@
-<section id="rsvp">
-    <h2>Wedding RSVP</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-        <label for="name">Your Name:</label>
-        <input type="text" name="name" id="name" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="beer-blog.html">Beer Blog</a></li>
+                <li><a href="wedding.html">Wedding</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Automated Feedback in Math Education: A Comparative Analysis of LLMs for Open-Ended Responses <a href="https://par.nsf.gov/servlets/purl/10541415"> arxiv</a></li>
+            <li>The Karp Dataset<a href="https://arxiv.org/pdf/2501.14705"> arxiv</a></li>
+            <li>Leveraging Large Language Models for Next-Generation Educational Technologies<a href="https://arxiv.org/pdf/2501.14705"> arxiv</a></li>
+            <li>Notional Machine in Mathematics and Introductory Computer Science Courses<a href="https://dl.acm.org/doi/pdf/10.1145/3545947.3576324"> arxiv</a></li>
+        </ul>
+    </section>
 
-        <label for="attending">Will you attend?</label>
-        <select name="attending" id="attending">
-            <option value="yes">Yes, can't wait!</option>
-            <option value="no">Sorry, can't make it</option>
-        </select>
+    <section id="rsvp">
+        <h2>Wedding RSVP</h2>
+        <form action="https://formspree.io/f/yourFormID" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
 
-        <label for="guests">Number of guests (including you):</label>
-        <input type="number" name="guests" id="guests" min="1" max="10">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
 
-        <label for="message">Anything you'd like to tell us?</label>
-        <textarea name="message" id="message" rows="4"></textarea>
+            <label for="attending">Will you attend?</label>
+            <select name="attending" id="attending">
+                <option value="yes">Yes, can't wait!</option>
+                <option value="no">Sorry, can't make it</option>
+            </select>
 
-        <button type="submit">Submit RSVP</button>
-    </form>
-</section>
+            <label for="guests">Number of guests (including you):</label>
+            <input type="number" name="guests" id="guests" min="1" max="10">
+
+            <label for="message">Anything you'd like to tell us?</label>
+            <textarea name="message" id="message" rows="4"></textarea>
+
+            <button type="submit">Submit RSVP</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Eamon Worden. Does this actually do anything?</p>
+    </footer>
+</body>
+</html>
