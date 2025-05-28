@@ -25,7 +25,7 @@
         }
 
         #rsvp {
-            background: rgba(0, 0, 0, 0.6); /* transparent black for readability */
+            background: rgba(0, 0, 0, 0.6);
             padding: 2em;
             border-radius: 10px;
             max-width: 600px;
@@ -96,33 +96,42 @@
             </p>
 
             <p>
+                <label for="guest-names">Names of your guests (if any):<br>
+                <input type="text" name="guest-names" id="guest-names"></label>
+            </p>
+
+            <p>
+                <label for="dietary">Do you or your guests have any dietary restrictions?<br>
+                <textarea name="dietary" id="dietary" rows="3"></textarea></label>
+            </p>
+
+            <p>
                 <label for="message">Anything you'd like to tell us?<br>
                 <textarea name="message" id="message" rows="4"></textarea></label>
             </p>
 
-            <!-- Honeypot spam protection -->
             <input type="text" name="_gotcha" style="display:none" autocomplete="off">
-
             <button type="submit">Submit RSVP</button>
         </form>
+
         <h3>Some moments from our journey</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center;">
-                <img src="ireland.jpg" alt="Ireland" style="width: 45%; max-width: 300px; border-radius: 10px;">
-                <img src="engagement.jpg" alt="Engagement" style="width: 45%; max-width: 300px; border-radius: 10px;">
-                <img src="ny.jpg" alt="New York" style="width: 45%; max-width: 300px; border-radius: 10px;">
-                <img src="running.jpg" alt="Running together" style="width: 45%; max-width: 300px; border-radius: 10px;">
-                <img src="syrup.jpg" alt="Running together" style="width: 45%; max-width: 300px; border-radius: 10px;">
-            </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center;">
+            <img src="ireland.jpg" alt="Ireland" style="width: 45%; max-width: 300px; border-radius: 10px;">
+            <img src="engagement.jpg" alt="Engagement" style="width: 45%; max-width: 300px; border-radius: 10px;">
+            <img src="ny.jpg" alt="New York" style="width: 45%; max-width: 300px; border-radius: 10px;">
+            <img src="running.jpg" alt="Running together" style="width: 45%; max-width: 300px; border-radius: 10px;">
+            <img src="syrup.jpg" alt="Syrup" style="width: 45%; max-width: 300px; border-radius: 10px;">
+        </div>
     </section>
+
     <script>
         document.getElementById('rsvp-form').addEventListener('submit', function (event) {
             alert('Thanks for RSVPing! We’re excited to celebrate with you.');
         });
     </script>
 
-
     <footer>
-        <p>&copy; 2025 Eamon Worden. Does this actually do anything?</p>
+        <p>&copy; 2025 Eamon Worden. Does this actually mean anything in the age of AI?</p>
     </footer>
 </body>
 </html>
