@@ -1,137 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eamon Worden & Greta Schmidt's Wedding</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            color: white;
-            animation: bgSlideshow 20s infinite;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        color: white;
+        animation: bgSlideshow 20s infinite;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-        @keyframes bgSlideshow {
-            0% { background-image: url('ireland.jpg'); }
-            25% { background-image: url('engagement.jpg'); }
-            50% { background-image: url('ny.jpg'); }
-            75% { background-image: url('running.jpg'); }
-            100% { background-image: url('ireland.jpg'); }
+      @keyframes bgSlideshow {
+        0% {
+          background-image: url("ireland.jpg");
         }
+        25% {
+          background-image: url("engagement.jpg");
+        }
+        50% {
+          background-image: url("ny.jpg");
+        }
+        75% {
+          background-image: url("running.jpg");
+        }
+        100% {
+          background-image: url("ireland.jpg");
+        }
+      }
 
-        #rsvp {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 2em;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: 2em auto;
-        }
+      #rsvp {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 2em;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 2em auto;
+      }
 
-        label, input, textarea, select {
-            display: block;
-            width: 100%;
-            margin-top: 0.5em;
-        }
+      label,
+      input,
+      textarea,
+      select {
+        display: block;
+        width: 100%;
+        margin-top: 0.5em;
+      }
 
-        input, textarea, select {
-            padding: 0.5em;
-            border-radius: 5px;
-            border: none;
-        }
+      input,
+      textarea,
+      select {
+        padding: 0.5em;
+        border-radius: 5px;
+        border: none;
+      }
 
-        button {
-            margin-top: 1em;
-            padding: 0.7em 1.5em;
-            border: none;
-            border-radius: 5px;
-            background-color: #ffcccc;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-        }
+      button {
+        margin-top: 1em;
+        padding: 0.7em 1.5em;
+        border: none;
+        border-radius: 5px;
+        background-color: #ffcccc;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Join us for Eamon Worden and Greta Schmidt's Wedding!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="beer-blog.html">Beer Blog</a></li>
-                <li><a href="wedding.html">Wedding</a></li>
-            </ul>
-        </nav>
+      <h1>Join us for Eamon Worden and Greta Schmidt's Wedding!</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="beer-blog.html">Beer Blog</a></li>
+          <li><a href="wedding.html">Wedding</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section id="rsvp">
-        <h2>Wedding RSVP</h2>
-        <form id="rsvp-form" action="https://formspree.io/f/mrbqnqed" method="POST">
-            <p>
-                <label for="name">Your Name:<br>
-                <input type="text" name="name" id="name" required></label>
-            </p>
+      <h2>Wedding RSVP</h2>
+      <form
+        id="rsvp-form"
+        action="https://formspree.io/f/mrbqnqed"
+        method="POST"
+      >
+        <p>
+          <label for="name"
+            >Your Name:<br />
+            <input type="text" name="name" id="name" required
+          /></label>
+        </p>
 
-            <p>
-                <label for="email">Email:<br>
-                <input type="email" name="email" id="email" required></label>
-            </p>
+        <p>
+          <label for="email"
+            >Email:<br />
+            <input type="email" name="email" id="email" required
+          /></label>
+        </p>
 
-            <p>
-                <label for="attending">Will you attend?<br>
-                <select name="attending" id="attending">
-                    <option value="yes">Yes, can't wait!</option>
-                    <option value="no">Sorry, can't make it</option>
-                </select></label>
-            </p>
+        <p>
+          <label for="attending"
+            >Will you attend?<br />
+            <select name="attending" id="attending">
+              <option value="yes">Yes, can't wait!</option>
+              <option value="no">Sorry, can't make it</option>
+            </select></label
+          >
+        </p>
 
-            <p>
-                <label for="guests">Number of guests (including you):<br>
-                <input type="number" name="guests" id="guests" min="0" max="2"></label>
-            </p>
+        <p>
+          <label for="guests"
+            >Number of guests (including you):<br />
+            <input type="number" name="guests" id="guests" min="0" max="2"
+          /></label>
+        </p>
 
-            <p>
-                <label for="guest-names">Names of your guests (if any):<br>
-                <input type="text" name="guest-names" id="guest-names"></label>
-            </p>
+        <p>
+          <label for="guest-names"
+            >Names of your guests (if any):<br />
+            <input type="text" name="guest-names" id="guest-names"
+          /></label>
+        </p>
 
-            <p>
-                <label for="dietary">Do you or your guests have any dietary restrictions?<br>
-                <textarea name="dietary" id="dietary" rows="3"></textarea></label>
-            </p>
+        <p>
+          <label for="dietary"
+            >Do you or your guests have any dietary restrictions?<br />
+            <textarea name="dietary" id="dietary" rows="3"></textarea>
+          </label>
+        </p>
 
-            <p>
-                <label for="message">Anything you'd like to tell us?<br>
-                <textarea name="message" id="message" rows="4"></textarea></label>
-            </p>
+        <p>
+            <label for="dietary"
+            >Do you or your guests have any dietary restrictions?<br />
+          <select name="fruits" multiple>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten free">Gluten Free</option>
+            <option value="other">PLACEHOLDER OTHER</option>
+          </select>
+        </p>
 
-            <input type="text" name="_gotcha" style="display:none" autocomplete="off">
-            <button type="submit">Submit RSVP</button>
-        </form>
+        <p>
+          <label for="message"
+            >Anything you'd like to tell us?<br />
+            <textarea name="message" id="message" rows="4"></textarea>
+          </label>
+        </p>
 
-        <h3>Some moments from our journey</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center;">
-            <img src="ireland.jpg" alt="Ireland" style="width: 45%; max-width: 300px; border-radius: 10px;">
-            <img src="engagement.jpg" alt="Engagement" style="width: 45%; max-width: 300px; border-radius: 10px;">
-            <img src="ny.jpg" alt="New York" style="width: 45%; max-width: 300px; border-radius: 10px;">
-            <img src="running.jpg" alt="Running together" style="width: 45%; max-width: 300px; border-radius: 10px;">
-            <img src="syrup.jpg" alt="Syrup" style="width: 45%; max-width: 300px; border-radius: 10px;">
-        </div>
+        <input
+          type="text"
+          name="_gotcha"
+          style="display: none"
+          autocomplete="off"
+        />
+        <button type="submit">Submit RSVP</button>
+      </form>
+
+      <h3>Some moments from our journey</h3>
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1em;
+          justify-content: center;
+        "
+      >
+        <img
+          src="ireland.jpg"
+          alt="Ireland"
+          style="width: 45%; max-width: 300px; border-radius: 10px"
+        />
+        <img
+          src="engagement.jpg"
+          alt="Engagement"
+          style="width: 45%; max-width: 300px; border-radius: 10px"
+        />
+        <img
+          src="ny.jpg"
+          alt="New York"
+          style="width: 45%; max-width: 300px; border-radius: 10px"
+        />
+        <img
+          src="running.jpg"
+          alt="Running together"
+          style="width: 45%; max-width: 300px; border-radius: 10px"
+        />
+        <img
+          src="syrup.jpg"
+          alt="Syrup"
+          style="width: 45%; max-width: 300px; border-radius: 10px"
+        />
+      </div>
     </section>
 
     <script>
-        document.getElementById('rsvp-form').addEventListener('submit', function (event) {
-            alert('Thanks for RSVPing! We’re excited to celebrate with you.');
+      document
+        .getElementById("rsvp-form")
+        .addEventListener("submit", function (event) {
+          alert("Thanks for RSVPing! We’re excited to celebrate with you.");
         });
     </script>
 
     <footer>
-        <p>&copy; 2025 Eamon Worden. Does this actually mean anything in the age of AI?</p>
+      <p>
+        &copy; 2025 Eamon Worden. Does this actually mean anything in the age of
+        AI?
+      </p>
     </footer>
-</body>
+  </body>
 </html>
