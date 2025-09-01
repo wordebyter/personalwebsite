@@ -34,11 +34,12 @@
         }
       }
 
-      #rsvp {
+      #rsvp,
+      #info {
         background: rgba(0, 0, 0, 0.6);
         padding: 2em;
         border-radius: 10px;
-        max-width: 600px;
+        max-width: 800px;
         margin: 2em auto;
       }
 
@@ -70,47 +71,13 @@
         cursor: pointer;
       }
 
-      /* Information section */
-      #info {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 2em;
-        border-radius: 10px;
-        max-width: 700px;
-        margin: 2em auto;
+      h2, h3 {
+        margin-top: 1em;
+        color: #ffcccc;
       }
 
-      .accordion {
-        border-bottom: 1px solid #ccc;
-        cursor: pointer;
-        padding: 1em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: bold;
-      }
-
-      .accordion:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .accordion::after {
-        content: "+";
-        font-size: 1.2em;
-      }
-
-      .accordion.active::after {
-        content: "−";
-      }
-
-      .panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        padding: 0 1em;
-      }
-
-      .panel p {
-        margin: 1em 0;
+      ul {
+        margin-left: 1.2em;
       }
     </style>
   </head>
@@ -161,7 +128,7 @@
         <p>
           <label for="guests"
             >Number of guests (including you):<br />
-            <input type="number" name="guests" id="guests" min="0" max="8"
+            <input type="number" name="guests" id="guests" min="0" max="2"
           /></label>
         </p>
 
@@ -232,59 +199,90 @@
       </div>
     </section>
 
-    <!-- Information Section -->
+    <!-- Essential Information Section -->
     <section id="info">
-      <h2>Information</h2>
+      <h2>Essential Information</h2>
 
-      <div class="accordion">Where is the wedding taking place?</div>
-      <div class="panel">
-        <p>The ceremony and reception will be held at Midvale Lutheran Church, 4329 Tokay Blvd, Madison, WI 53711.</p>
-      </div>
+      <h3>Wedding</h3>
+      <p>Midvale Community Lutheran Church<br>
+      4329 Tokay Blvd, Madison, WI 53711<br>
+      Free parking on-site</p>
 
-      <div class="accordion">What should I wear?</div>
-      <div class="panel">
-        <p>Be ready to dance.</p>
-      </div>
+      <h3>Reception</h3>
+      <p>Monona Terrace – Community Terrace Room<br>
+      1 John Nolen Dr, Madison, WI 53703<br>
+      Parking garage: $5 per day (weekend rate)</p>
 
-      <div class="accordion">Is there parking available?</div>
-      <div class="panel">
-        <p>Yes, free parking is available at the church.</p>
-      </div>
+      <h3>Hotel</h3>
+      <p>Hilton Madison Monona Terrace<br>
+      9 E Wilson St, Madison, WI 53703<br>
+      <a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=MSNMHHF&groupCode=919&arrivaldate=2026-03-12&departuredate=2026-03-16&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank" style="color:#ffcccc;">
+        Room block link
+      </a></p>
 
-      <div class="accordion">What can I do in Madison?</div>
-      <div class="panel">
-        <p>Places of interest to possibly visit in your free time.
+      <h3>Dress</h3>
+      <p>Cocktail</p>
 
- 
+      <h3>Saturday Schedule</h3>
+      <ul>
+        <li>1:59 pm Wedding</li>
+        <li>Pictures and pie to follow wedding ceremony (at Midvale)</li>
+        <li>5:00 pm Toasts (Monona Terrace)</li>
+        <li>6:30 pm Cake Cutting</li>
+        <li>7:00 pm First Dance</li>
+        <li>10:00 pm Head home</li>
+      </ul>
 
-Wisconsin State capital and capital square .
+      <h3>While in Madison</h3>
+      <p><strong>Events:</strong></p>
+      <ul>
+        <li>Back to the Future: The Musical at the Overture Center</li>
+        <li>Shamrock Shuffle 5k, 10k, or 10-mile bike ride</li>
+      </ul>
 
-Lake Monona and Lake Mendota
+      <p><strong>Places to see:</strong></p>
+      <ul>
+        <li>Wisconsin State Capitol and Capitol Square</li>
+        <li>Lake Monona and Lake Mendota</li>
+        <li>State Street</li>
+        <li>Madison Children’s Museum</li>
+        <li>Chazen Museum of Art</li>
+        <li>Veterans Museum</li>
+        <li>Vilas Zoo</li>
+        <li>Olbrich Botanical Gardens</li>
+        <li>Madison Public Market – 202 N. First Street</li>
+        <li>Lakeshore Path and Picnic Point (UW Madison campus)</li>
+        <li>Numerous bike paths</li>
+        <li>Ice Age Trail</li>
+      </ul>
 
-State Street
+      <p><strong>Favorite food and drink:</strong></p>
+      <ul>
+        <li>Collectivo Coffee</li>
+        <li>Greenbush Doughnuts</li>
+        <li>Rocky Rococo Pizza</li>
+        <li>Culver’s</li>
+        <li>New Glarus Brewing</li>
+      </ul>
 
-Overture Center- Back to the Future is playing that week if you have time for a show.
+      <h3>Full Schedule</h3>
+      <p><strong>Friday:</strong></p>
+      <ul>
+        <li>Wedding rehearsal at Midvale Community Lutheran Church (wedding party)</li>
+        <li>Rehearsal dinner at Portabella (wedding party)</li>
+      </ul>
 
-Madison Children’s Museum
+      <p><strong>Saturday:</strong></p>
+      <ul>
+        <li>Hair and makeup at Midvale (wedding party)</li>
+        <li>Wedding, reception, clean up (everyone)</li>
+        <li>After party in Bridal Suite (wedding party)</li>
+      </ul>
 
-Chazen Museum of Art
-
-Veterans Museum
-
-Vilas Zoo
-
-Olbrich Botanical Gardens
-
-Madison Public Market 202 N. First Street, on the corner of E. Johnson and First Streets.
-
-Lakeshore path and Picnic point on the UW Madison Campus
-
-Numerous bike paths around Madison and surrounding communities.</p>
-      </div>
-      <div class="accordion">Where should I stay?</div>
-      <div class="panel">
-        <p>TBD</p>
-      </div>
+      <p><strong>Sunday:</strong></p>
+      <ul>
+        <li>Brunch at Schmidt house (all interested)</li>
+      </ul>
     </section>
 
     <script>
@@ -293,20 +291,6 @@ Numerous bike paths around Madison and surrounding communities.</p>
         .addEventListener("submit", function (event) {
           alert("Thanks for RSVPing! We’re excited to celebrate with you.");
         });
-
-      // Accordion script
-      const accordions = document.querySelectorAll(".accordion");
-      accordions.forEach((acc) => {
-        acc.addEventListener("click", function () {
-          this.classList.toggle("active");
-          const panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      });
     </script>
 
     <footer>
