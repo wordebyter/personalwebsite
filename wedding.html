@@ -69,6 +69,49 @@
         font-weight: bold;
         cursor: pointer;
       }
+
+      /* Information section */
+      #info {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 2em;
+        border-radius: 10px;
+        max-width: 700px;
+        margin: 2em auto;
+      }
+
+      .accordion {
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .accordion:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .accordion::after {
+        content: "+";
+        font-size: 1.2em;
+      }
+
+      .accordion.active::after {
+        content: "−";
+      }
+
+      .panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 1em;
+      }
+
+      .panel p {
+        margin: 1em 0;
+      }
     </style>
   </head>
   <body>
@@ -189,12 +232,51 @@
       </div>
     </section>
 
+    <!-- Information Section -->
+    <section id="info">
+      <h2>Information</h2>
+
+      <div class="accordion">Where is the wedding taking place?</div>
+      <div class="panel">
+        <p>The ceremony and reception will be held at [Venue Name, Address].</p>
+      </div>
+
+      <div class="accordion">What should I wear?</div>
+      <div class="panel">
+        <p>Dress code is semi-formal. Wear something comfortable for dancing!</p>
+      </div>
+
+      <div class="accordion">Is there parking available?</div>
+      <div class="panel">
+        <p>Yes, free parking is available at the venue.</p>
+      </div>
+
+      <div class="accordion">Can I bring a guest?</div>
+      <div class="panel">
+        <p>Please check your RSVP invitation — space is limited, but we would love for you to bring someone if possible.</p>
+      </div>
+    </section>
+
     <script>
       document
         .getElementById("rsvp-form")
         .addEventListener("submit", function (event) {
           alert("Thanks for RSVPing! We’re excited to celebrate with you.");
         });
+
+      // Accordion script
+      const accordions = document.querySelectorAll(".accordion");
+      accordions.forEach((acc) => {
+        acc.addEventListener("click", function () {
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      });
     </script>
 
     <footer>
