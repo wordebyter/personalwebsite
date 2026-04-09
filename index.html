@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Eamon Worden – PhD Student in AI & Education</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Eamon Worden</h1>
+        <p>PhD Candidate in Computer Science • Worcester Polytechnic Institute</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="beer-blog.html">Beer Blog</a></li>
-                <!-- <li><a href="wedding.html">Wedding</a></li> -->
+                <li><a href="projects.html">Research & Projects</a></li>
+                <!-- <li><a href="beer-blog.html">Beer Blog</a></li> -->
             </ul>
-        </nav>             
+        </nav>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm a PhD Student at WPI with Neil Heffernan interested in AI and education. My exciting work typically includes fine-tuning LLMs for various education-related tasks, such as providing feedback to open response students in ASSISTments. For hobbies, I enjoy homebrewing, running and board games. I enjoy reading fantasy books with dragons and currently won't shut up about The Empyrean series.</p>
+        <p class="bio">
+            I am a PhD student at Worcester Polytechnic Institute advised by Prof. Neil Heffernan. 
+            My research lies at the intersection of <strong>artificial intelligence</strong>, <strong>data science</strong>, and <strong>education</strong>. 
+            I develop and evaluate LLM-based systems (prompt engineering, RAG, fine-tuning, RLHF) to provide scalable, high-quality support to students in online learning platforms such as ASSISTments.
+        </p>
+        <p>
+            Recent work includes running randomized controlled trials (RCTs) showing that AI-generated explanations match expert quality and improve student learning, curating novel educational datasets for LLM benchmarking, and fine-tuning models on challenging reasoning tasks (e.g., NP-completeness reductions).
+        </p>
+        <p>
+            Outside research, I enjoy homebrewing, running, board games, and reading fantasy (currently obsessed with The Empyrean series).
+        </p>
+    </section>
+
+    <section id="highlights">
+        <h2>Research Highlights</h2>
+        <ul>
+            <li>Ran RCTs demonstrating AI-generated step-by-step explanations are as effective as expert-authored ones for middle-school math learning — and far better than direct answers.</li>
+            <li>Curated <strong>FoundationalASSIST</strong>, a 1.7M-interaction dataset with full question text, student responses, distractors, and Common Core alignment — enabling new LLM research on knowledge tracing and pedagogical reasoning (dataset forthcoming).</li>
+            <li>Created the <strong>Karp dataset</strong> of detailed NP-completeness reduction proofs; used it to fine-tune LLMs and improve mathematical reasoning capabilities.</li>
+        </ul>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: wordeneamon@gmail.com</p>
+        <p>Email: <a href="mailto:csworden23@gmail.com">csworden23@gmail.com</a> • <a href="https://github.com/worde-byte">GitHub</a> • Worcester, MA</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Eamon Worden</p>
+        <p>© 2026 Eamon Worden • Last updated February 2026</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
