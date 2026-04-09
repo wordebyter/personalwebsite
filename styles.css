@@ -99,3 +99,35 @@ footer {
     h1 { font-size: 2.2em; }
     nav li { display: block; margin: 12px 0; }
 }
+
+/* Container for the AI content */
+.ai-generated-block {
+    background-color: #f8f9fa; /* Very light grey */
+    border-left: 4px solid #4285f4; /* Gemini blue accent */
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+/* Small label in the top right corner */
+.ai-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #4285f4;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 0 8px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Ensure math and highlights inside the block look distinct */
+.ai-generated-block .math {
+    font-family: "Courier New", monospace;
+    background: #eee;
+    padding: 5px;
+    display: inline-block;
+}
