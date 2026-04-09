@@ -64,6 +64,36 @@
 
                 <p><strong>Summary:</strong> You found the correct "extra" amount, but remember to add it back to the starting amount to find the new total!</p>
             </div>
+            <p>
+                Perhaps you would agree with me that the amount of text is excessive. The student clearly knows whats going on and made a slip when answering 168, 30% of 560, but forgot to add it to the original amount of 560. This was just one of the issues we encourtered when using LLMs to generate feedback. You also might notice it gives away the answer, something we did not want to do as productive struggle and zone of proximal development are both well established theories. Interestingly, you might also notice it gives a better way to the solve the problem, calculating 130% of 560, rather than calculating 30% and adding it to the original 560. This would prevent similar issues in the future, and it might be an interesting question of whether this would actually cause students to learn.
+            </p>
+            <p>
+                I must admit, for this particular project I was fortunate to have Luca, a star undergraduate at WPI working on the prompt engineering with me. And by with me I mean he did most of the work. He would iterate on the prompt, then present it to two of my lab mates, one of whom is a PhD student and had been a teacher in Singapore for 8ish years, the other is a postdoc who specializes in early childhood education. They would look at examples of feedback, give feedback on the feedback, and Luca would iterate. I don't know he had the most fun, it got boring quite quickly looking at these feedbacks. And he was a very good AI-engeering and ran the model using vLLM on the Turing Cluster at WPI, with I think less interest in education.
+            </p>
+            <p>
+                I provided guidance to Luca, such as giving him 20 shots for the prompt and other stylistic comments, and he would implement and present them to Ivan and Sarah. We made changes such as making the language simpler, feedback shorter, feedback more aligned with Illustrative Mathematics, and some other stuff I can't remember, nor do I think it would be valueable to remember, Eventually, after many rounds of minor changes, we used LLM-as-a-judge to automatically filter out feedback, had Jennie of The ASSISTments Foundation review 100 feedbacks, and when she felt confident we began the RCT.
+            </p>
+            <p>
+                Ultimately we added it for a few thousand wrong answers on around 700 problems. I actually added three per wrong answer. I used a temperature of 0.7 to generate the feedback, and I was hoping after the study I would have enough data to fit a model with fixed effects per unique feedback, get an estimate of the treatment of each similar, yet slightly unique feedback message, use proximal policy to fine-tune a small language model on the estimate and write new and improved feedback. unfortunately we did not have enough data per wrong answer to do this.
+            </p>
+            <p>
+                The rest of the study was rather boring. It went smoothly, we got ~20,000 students across the 2 conditions, Aaron's system made it easy to fetch the data. The analysis was relatively straightforwards. The writing was boring but not as boring as prompt engineering. I tore my MCL in December while writing for February deadlines which set things back.
+            </p>
+            <p>
+                The only real excitement after the prompt engineering was the negative coefficient between AI-Feedback and prior_5_across. This totally cancelled out any benefit of feedback, and suggests feedback only helps lower knowledge students, a feasible result if you consider results such as The Expertise Reversal Effect (Kalyuga, 2009).
+            </p>
+            <p>
+                Perhaps that does not surprise you. If you consider the above example, it is unlikely any feedback provided will improve their learning. They already know how to solve the problem, just made a "dumb mistake" or slip as it is more commonly called in the education research community as far as I know. Perhaps self-regulation, or saying "Instead of doing two steps, you can calculate the total in one go. If this month is 30% more than last month, it means this month is <strong>130%</strong> of last month's total." as Gemini did (without the rest of the unnecessary verbage) <strong>would</strong> actually help the student. Stay tuned for that study.
+            </p>
+            <p>
+                In short, perhaps in the future with well defined evaluation criteria we can even automate the prompt engineering process, and I can go back to the critical thinking part of the job. Or maybe we'll pass that off to LLMs as well and shut down our brain entirely. There are pros and cons and I will leave the discussion of pros and cons of turning off our brains entirely to you, or a future blog post.
+            </p>
+            <hr class="post-divider">
+
+            <p class="post-signature">
+                Until then,<br>
+                <strong>Eamon</strong>
+            </p>
         <footer class="post-footer">
             <p><a href="../blog.html">← Back to Blog</a></p>
         </footer>
